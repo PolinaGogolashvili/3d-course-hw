@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+body {
+  font-family: "StratosSkyeng", sans-serif;
+  font-style: normal;
+  background-color: #004980;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main {
   background-color: #004980;
   width: 1024px;
@@ -11,6 +20,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .container {
   width: 480px;
   height: 460px;
