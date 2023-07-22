@@ -1,14 +1,17 @@
 {
   "dependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.0"
   },
   "name": "3d-course-hw",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write ./card-game/"
+    "format": "prettier --write ./card-game/",
+    "lint:js": "eslint ./card-game/**/*.js"
   },
   "author": "",
   "license": "ISC",
