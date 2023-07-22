@@ -34,3 +34,20 @@ function chooseLevel() {
 }
 
 chooseLevel();
+
+function startPlaying() {
+  startButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (chosenLevel === null) {
+      alert("Чтобы сыграть, сначала выберите уровень");
+      return;
+    }
+
+    const newPage = document.createElement("div");
+    document.body.innerHTML = "";
+    document.body.appendChild(newPage);
+    console.log(`ВАш уровень...`);
+  });
+}
+
+startPlaying();
