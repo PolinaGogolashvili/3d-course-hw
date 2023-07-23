@@ -19,10 +19,10 @@ export function renderCards() {
     screenAllCards.innerHTML = screenCards
 
     const cardSymbols = [
-        '<img src="./card-game/img/spades.svg">',
-        '<img src="./card-game/img/hearts.svg">',
-        '<img src="./card-game/img/diamonds.svg">',
-        '<img src="./card-game/img/clubs.svg">',
+        '<img src="./img/spades.svg">',
+        '<img src="./img/hearts.svg">',
+        '<img src="./img/diamonds.svg">',
+        '<img src="./img/clubs.svg">',
     ]
     const cardValues = ["A", "K", "Q", "J", "10", "9", "8", "7", "6"]
     let cardDeck = []
@@ -40,7 +40,7 @@ export function renderCards() {
 
     for (let i = 0; i < cardSymbols.length; i++) {
         let back = {
-            symbol: '<img src="./card-game/img/back.jpg">',
+            symbol: '<img src="./img/back.jpg">',
             value: "RB",
         }
         cardBack.push(back)
