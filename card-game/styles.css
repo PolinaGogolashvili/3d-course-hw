@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng;
     src: url("../fonts/Web fonts/stratosskyengweb-regular.woff2")
         format("woff2");
     font-style: normal;
@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: "StratosSkyeng", sans-serif;
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     background-color: #004980;
     position: relative;
@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .container {
     width: 480px;
     height: 460px;
@@ -42,7 +43,7 @@ body {
 }
 
 .level-choice {
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng, sans-serif;
     width: 208px;
     height: 96px;
     font-size: 40px;
@@ -61,7 +62,7 @@ body {
     width: 98px;
     height: 98px;
     color: #0080c1;
-    background-color: #ffffff;
+    background-color: #fff;
     font-size: 64px;
     line-height: 72px;
     display: flex;
@@ -83,7 +84,7 @@ body {
     align-items: center;
     font-size: 24px;
     line-height: 32px;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     border: none;
 }
@@ -94,4 +95,136 @@ body {
 
 .chosen-level {
     border: 2px solid #2d9dd5;
+}
+
+.start {
+    width: 1024px;
+    height: 774px;
+    color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.time-text {
+    display: flex;
+}
+
+.min,
+.sec {
+    width: 50%;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.min {
+    padding-right: 12px;
+}
+
+.time-figures {
+    font-size: 64px;
+    line-height: 72px;
+}
+
+.begin {
+    width: 246px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    box-sizing: border-box;
+    background-color: #7ac100;
+    border-radius: 12px;
+    border: none;
+}
+
+.begin:hover {
+    background-color: #65960f;
+}
+
+.card-deck {
+    background-color: #004980;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-back img {
+    border-radius: 4px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.card {
+    color: #000;
+    width: 95px;
+    height: 133px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 8px;
+}
+
+.card .symbol-top-right {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.card .symbol-bottom-left {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.card .symbol-top-right,
+.card .symbol-bottom-left {
+    transform: rotate(180deg);
+}
+
+.card .symbol-bottom-right {
+    font-size: 24px;
+    transform: rotate(180deg);
+}
+
+.card .value-center {
+    text-align: center;
+    top: -5px;
+    position: relative;
+}
+
+.symbol-card {
+    width: 4px;
+    height: 5px;
+}
+
+.block-symbol {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 4px;
+}
+
+.my-svg img {
+    transform: scale(4);
 }
