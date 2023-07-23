@@ -228,3 +228,8 @@ body {
 .my-svg img {
     transform: scale(4);
 }
+
+.svg-img {
+    height: 25px;
+    width: 29px;
+}

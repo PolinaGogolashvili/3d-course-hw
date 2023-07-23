@@ -19,10 +19,10 @@ export function renderCards() {
     screenAllCards.innerHTML = screenCards
 
     const cardSymbols = [
-        '<img src="./img/spades.svg">',
-        '<img src="./img/hearts.svg">',
-        '<img src="./img/diamonds.svg">',
-        '<img src="./img/clubs.svg">',
+        '<img class="svg-img" src="./img/spades.svg">',
+        '<img class="svg-img" src="./img/hearts.svg">',
+        '<img class="svg-img" src="./img/diamonds.svg">',
+        '<img class="svg-img" src="./img/clubs.svg">',
     ]
     const cardValues = ["A", "K", "Q", "J", "10", "9", "8", "7", "6"]
     let cardDeck = []
@@ -65,9 +65,7 @@ export function renderCards() {
 
     let backHtml = '<div class="row">'
     for (let i = 0; i < 36; i++) {
-        backHtml += `<div class="card-back">${
-            cardBack[i % cardBack.length].symbol
-        }</div>`
+        backHtml += `<div class="card-back"><img src="./img/back.jpg"></div>`
     }
     backHtml += `</div>`
     document.querySelector(".card-back").innerHTML = backHtml
