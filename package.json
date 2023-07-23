@@ -20,6 +20,7 @@
     "license": "ISC",
     "description": "",
     "devDependencies": {
+        "css-loader": "^6.8.1",
         "husky": "^8.0.3",
         "stylelint": "^15.10.2",
         "stylelint-config-standard": "^34.0.0",
