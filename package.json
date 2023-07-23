@@ -12,12 +12,15 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write ./card-game/",
         "lint:js": "eslint ./card-game/**/*.js",
-        "lint:css": "stylelint ./card-game/**/*.css"
+        "lint:css": "stylelint ./card-game/**/*.css",
+        "lint": "npm run lint:js && npm run lint:css",
+        "prepare": "husky install"
     },
     "author": "",
     "license": "ISC",
     "description": "",
     "devDependencies": {
+        "husky": "^8.0.3",
         "stylelint": "^15.10.2",
         "stylelint-config-standard": "^34.0.0",
         "stylelint-prettier": "^4.0.0"
