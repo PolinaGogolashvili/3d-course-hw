@@ -223,10 +223,17 @@ body {
     display: flex;
     align-items: flex-start;
     padding-left: 4px;
+    width: 7px;
+    height: 6px;
+}
+
+.card-letter {
+    width: 11px;
+    height: 21px;
 }
 
 .my-svg img {
-    transform: scale(4);
+    transform: scale(1);
 }
 
 .svg-img {

@@ -52,9 +52,9 @@ export function renderCards() {
     for (let i = 0; i < 36; i++) {
         deckHtml += `<div class="card ${deck[i].value}">`
         if (deck[i].value !== "RB") {
-            deckHtml += `<div class="symbol-top-left"><div>${deck[i].value}</div><div class="block-symbol">${deck[i].symbol}</div></div>`
+            deckHtml += `<div class="symbol-top-left"><div class="card-letter">${deck[i].value}</div><div class="block-symbol">${deck[i].symbol}</div></div>`
             deckHtml += `<div class="value-center my-svg">${deck[i].symbol}</div>`
-            deckHtml += `<div class="symbol-bottom-right"><div>${deck[i].value}</div><div class="block-symbol">${deck[i].symbol}</div></div>`
+            deckHtml += `<div class="symbol-bottom-right"><div class="card-letter">${deck[i].value}</div><div class="block-symbol">${deck[i].symbol}</div></div>`
         } else {
             deckHtml += `${deck[i].symbol}`
         }
