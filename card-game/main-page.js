@@ -1,58 +1,56 @@
-const mainPageElement = document.getElementById("first")
+import { renderCards } from "./cards.js"
 
-const pageStart = `
-<form class="container">
-<p class="level-choice">Выбери сложность</p>
-<div class="level" id="levels">
-  <!-- рендерится из js -->
-</div>
-<button type="submit" class="start-button">Старт</button>
-</form>`
+export const mainPageElement = document.querySelector(".main")
+
+const pageStart = `<form class="container">
+                            <p class="level-choice">Выбери сложность</p>
+                                <div class="level" id="levels"></div>
+                                <button type="submit" class="start-button">Старт</button>
+                    </form>`
 
 mainPageElement.innerHTML = pageStart
 
 const levels = [{ level: 1 }, { level: 2 }, { level: 3 }]
 
-let chosenLevel = null
+export let chosenLevel = null
 const levelList = document.getElementById("levels")
-const startButton = document.querySelector(".start-button")
+const form = document.querySelector(".container")
 
 export const renderStartPage = () => {
+    mainPageElement.classList.add("main")
     const renderLevels = () => {
-        const levelHtml = levels
+        const levelsHtml = levels
             .map((level) => {
-                return `<div class="level-item">${level.level}</div>`
+                return `<label class="level">
+        <input type="radio" name="level" value="${level.level}">${level.level}</label>`
             })
             .join("")
-
-        levelList.innerHTML = levelHtml
+        levelList.innerHTML = levelsHtml
     }
-
     renderLevels()
 
-    const selectLevels = document.querySelectorAll(".level-item")
-    for (const selectLevel of selectLevels) {
-        selectLevel.addEventListener("click", (event) => {
-            event.stopPropagation()
-
-            if (chosenLevel !== null) {
-                chosenLevel.classList.remove("chosen-level")
-            }
-            selectLevel.classList.add("chosen-level")
-            chosenLevel = selectLevel
+    const radioButtons = document.querySelectorAll('input[type="radio"]')
+    for (const radioButton of radioButtons) {
+        radioButton.addEventListener("change", () => {
+            radioButtons.forEach((btn) => {
+                if (btn !== radioButton) {
+                    btn.parentElement.classList.remove("chosen-level")
+                }
+            })
+            radioButton.parentElement.classList.add("chosen-level")
+            chosenLevel = radioButton
         })
     }
 
-    startButton.addEventListener("click", (event) => {
-        event.stopPropagation()
-        if (chosenLevel === null) {
+    form.addEventListener("submit", (event) => {
+        event.preventDefault()
+        const checkedLevel = event.target.elements.level.value
+        if (checkedLevel) {
+            chosenLevel = parseInt(checkedLevel)
+            mainPageElement.style.display = "none"
+            renderCards()
+        } else {
             alert("Чтобы сыграть, сначала выберите уровень")
-            return
         }
-
-        const newPage = document.createElement("div")
-        document.body.innerHTML = ""
-        document.body.appendChild(newPage)
-        console.log(`ВАш уровень...`)
     })
 }

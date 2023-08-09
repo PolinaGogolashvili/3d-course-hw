@@ -73,6 +73,21 @@ body {
     border-radius: 12px;
 }
 
+.level input[type="radio"] {
+    display: none;
+}
+
+.level label {
+    color: #0080c1;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 12px;
+    width: 98px;
+    height: 98px;
+    font-size: 64px;
+    line-height: 72px;
+}
+
 .start-button {
     background-color: #7ac100;
     border-radius: 12px;
